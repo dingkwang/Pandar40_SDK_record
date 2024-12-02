@@ -1,6 +1,7 @@
 #ifndef __PANDORA_SDK_IN_H
 #define __PANDORA_SDK_IN_H
 
+#include <boost/thread.hpp>
 #include <pthread.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>

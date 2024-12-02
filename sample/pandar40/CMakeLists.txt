@@ -4,7 +4,7 @@ find_package(Boost REQUIRED )
 find_package(PCL REQUIRED )
 
 
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 14)
 
 find_file(HAVE_HESAILIDARSDK_H_ PATHS "/usr/local/include" "/usr/include")
 message(STATUS "HAVE_HESAILIDARSDK_H_ == ${HAVE_HESAILIDARSDK_H_}")	# might be HAVE_HESAILIDARSDK_H_-NOTFOUND
@@ -20,7 +20,7 @@ macro(FIND_IN_PATH TARGET_H TARGET_H_IN_PATH)
 	message(STATUS "\"${TARGET_H}\" in path == ${${TARGET_H_IN_PATH}}")
 endmacro()
 
-#set(CMAKE_REQUIRED_FLAGS "-std=c++11")
+#set(CMAKE_REQUIRED_FLAGS "-std=c++14")
 #set(CMAKE_REQUIRED_INCLUDES "/usr/local/include") 
 
 include(CheckIncludeFileCXX)

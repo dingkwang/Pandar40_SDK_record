@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 project(hesaiLidarSDK)
 
 
-find_package(Boost REQUIRED )
+find_package(Boost REQUIRED COMPONENTS thread system)
 find_package(PCL REQUIRED )
 
 set (LINK_LIBRARY_PLUS "")
@@ -15,8 +15,8 @@ endif()
 
 option(Debug_Enable "Enable Camera Driver, For Pandora" OFF)
 
-set (CMAKE_CXX_FLAGS "-fPIC -std=c++11")
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_FLAGS "-fPIC -std=c++14")
+set (CMAKE_CXX_STANDARD 14)
 
 set (SRC 
 	src/calibration.cc
@@ -70,6 +70,8 @@ target_link_libraries(${PROJECT_NAME}
 		pandora_client
 		pcap
 		yaml-cpp
+		Boost::thread
+    	Boost::system
 	   	${JPEG_LIB}
 		${Boost_LIBRARIES}
 		${PCL_COMMON_LIBRARIES} 
@@ -80,10 +82,10 @@ target_link_libraries(${PROJECT_NAME}
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
 	
 
-	add_executable(pandora_sdk_test 
-		src/test.cc
+	add_executable(record 
+		src/record.cc
 	)
-	target_link_libraries(pandora_sdk_test 
+	target_link_libraries(record 
 		${PROJECT_NAME}
 		${Boost_LIBRARIES}
 		${PCL_COMMON_LIBRARIES} ${PCL_IO_LIBRARIES}

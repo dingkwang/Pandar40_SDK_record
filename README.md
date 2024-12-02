@@ -1,6 +1,8 @@
 # HesaiLidar_General_SDK  
 
-## About the project  
+## About the project
+**Update for Ubuntu 20**
+
 HesaiLidar_General_SDK project is the software development kit for **Pandar40** LiDAR manufactured by Hesai Technology.
 ## Environment and Dependencies
 **System environment requirement: Linux + G++ 7.0 or above**   
@@ -14,7 +16,7 @@ $ git clone https://github.com/HesaiTechnology/Pandar40_SDK.git --recursive
 ```
 ## Build
 ```
-$ cd Pandar40_SDK
+$ cd Pandar40_SDK_record
 $ mkdir build
 $ cd build
 $ cmake ..

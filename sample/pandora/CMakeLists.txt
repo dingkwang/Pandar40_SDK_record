@@ -5,7 +5,7 @@ find_package(PCL REQUIRED )
 find_package(OpenCV REQUIRED )
 
 
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 14)
 
 # When sdk compiled with Camera_Enable , This definition must be add to cmakelists
 add_definitions("-DHESAI_WITH_CAMERA")
