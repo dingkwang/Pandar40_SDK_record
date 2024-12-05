@@ -12,7 +12,7 @@ $ sudo apt install libpcap-dev libyaml-cpp-dev
 ```
 ## Clone
 ```
-$ git clone https://github.com/HesaiTechnology/Pandar40_SDK.git --recursive
+$ git clone git@github.com:dingkwang/Pandar40_SDK_record.git --recursive
 ```
 ## Build
 ```
